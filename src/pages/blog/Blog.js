@@ -9,7 +9,7 @@ const Blog = (props) =>{
         document.titile = title
 
     },[title])
-    
+
     return(
         <div className="container">
             <div className="accordion" id="accordionPanelsStayOpenExample">

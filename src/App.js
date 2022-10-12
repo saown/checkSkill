@@ -13,8 +13,6 @@ const App = () => {
     const url = "https://openapi.programming-hero.com/api/quiz";
 
     const [quizzes, setQuizzes] = useState([]);
-    // const [quizTitle, setQuizTitle ] = useState([]);
-    // const [quiz, setQuiz] = useState([])
 
     useEffect(()=>{
         fetch(url,{
