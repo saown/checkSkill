@@ -3,16 +3,23 @@ import {Link} from "react-router-dom";
 import HeroSection from "./HeroSection";
 
 const Home = (props) =>{
+
     const {title, allQuiz} = props;
+
     useEffect(()=>{
+
         document.title = title;
+
     },[title])
+
     return(
         <div className="container">
             <HeroSection/>
             <div className="text-center text-uppercase h2 mb-5">Start Your Quiz Now</div>
             <div className="d-flex flex-wrap gap-4 justify-content-center align-items-center mb-5">
+
                 {allQuiz.map((item,index)=>{
+
                     return(
                         <div className="custom-card" key={index}>
                             <img src={item.logo} className="card-img-top custom-card-img bg-dark" alt={item.name}/>
@@ -23,7 +30,9 @@ const Home = (props) =>{
                             </div>
                         </div>
                     )
+
                 })}
+
             </div>
         </div>
     )
