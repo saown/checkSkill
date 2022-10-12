@@ -22,9 +22,9 @@ const SingleQuiz = (props) => {
             })
     },[url])
 
-
     return(
         <div>
+            <div className="text-center h2 mb-4">Quiz of {quiz !== null ? quiz.name : ""}</div>
             {quiz !== null ? quiz.questions.map((item,index)=>{
                 return(
                     <Quiz key={index} quiz={item} nameOfInput={`answers${index}`}/>
