@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {BsFillEyeFill} from "react-icons/bs";
 
 const Quiz = (props) => {
-    const {quiz} = props
+    const {quiz, nameOfInput} = props
     const [alertMessage, setAlertMessage] = useState('')
     let answer = {status: 0, message: "Please choose your answer."};
     const onAnswerChange = (data) => {
@@ -34,7 +34,7 @@ const Quiz = (props) => {
                         {quiz.options.map((item,index)=>{
                             return(
                                 <div key={index} className="mb-1 d-flex align-items-center gap-1">
-                                    <input type="radio" name="answer" value={item} onChange={(e)=>onAnswerChange(e.target.value)}/>
+                                    <input type="radio" name={nameOfInput} value={item} onChange={(e)=>onAnswerChange(e.target.value)}/>
                                     <label className="card-text">{item}</label>
                                 </div>
                             )

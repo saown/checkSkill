@@ -27,7 +27,7 @@ const SingleQuiz = (props) => {
         <div>
             {quiz !== null ? quiz.questions.map((item,index)=>{
                 return(
-                    <Quiz key={index} quiz={item}/>
+                    <Quiz key={index} quiz={item} nameOfInput={`answers${index}`}/>
                 )
             }) : ''}
 
