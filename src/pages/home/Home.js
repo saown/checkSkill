@@ -22,6 +22,7 @@ const Home = (props) =>{
 
                     return(
                         <div className="custom-card" key={index}>
+
                             <img src={item.logo} className="card-img-top custom-card-img bg-dark" alt={item.name}/>
                             <div className="card-body">
                                 <p className="card-title h5">{item.name}</p>
