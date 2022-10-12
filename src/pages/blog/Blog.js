@@ -1,10 +1,15 @@
 import React, {useEffect} from "react";
 
 const Blog = (props) =>{
+
     const {title} = props
+
     useEffect(()=>{
+
         document.titile = title
+
     },[title])
+    
     return(
         <div className="container">
             <div className="accordion" id="accordionPanelsStayOpenExample">
